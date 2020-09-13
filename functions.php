@@ -128,12 +128,12 @@ function coa_micro_scripts() {
 	wp_enqueue_script( 'coa_micro-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	wp_enqueue_script( 'coa_micro-jquery-match-height', get_template_directory_uri() . '/js/jquery.match-height.min.js', array(), null, true );
-	
+
 	//owlcarousel.min.js
 	wp_enqueue_script( 'coa_micro-owl-carousel-min', get_template_directory_uri() . '/libraries/owl-carousel/owl.carousel.min.js', array(), null, true );
-	
+
 	wp_enqueue_script( 'coa_micro-jquery-placeholder', get_template_directory_uri() . '/js/jquery.placeholder.min.js', array(), null, true );
-	
+
 	wp_enqueue_script( 'coa_micro-jquery-smooth-scroll', get_template_directory_uri() . '/js/jquery.smooth-scroll.min.js', array(), null, true );
 
 	wp_enqueue_script( 'coa_micro-program', get_template_directory_uri() . '/js/program.js', array(), null, true );
@@ -202,13 +202,13 @@ function collect_user_page( $field_id, $data, $post_title )
 	if(!empty($post))
 	{
 		?>
-		
+
 		<input type="hidden" name="ninja_forms_field_<?php echo $field_id;?>" value="<?php echo get_permalink($post->ID);?>">
 
 		<input type="hidden" name="ninja_forms_field_<?php echo $field_id;?>" value="<?php echo ($post->ID);?>">
 
 		<input type="hidden" name="ninja_forms_field_<?php echo $field_id;?>" value="<?php echo the_title_attribute($post->post_title);?>">
-	
+
 		<?php
 	}
 
@@ -228,3 +228,5 @@ function yoasttobottom() {
 	return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+include_once get_theme_file_path( 'inc/acf-field-groups.php' );
