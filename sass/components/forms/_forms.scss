@@ -1,0 +1,273 @@
+@import "buttons";
+
+@import "fields";
+
+/*--------------------------------------------------------------
+## Form Component
+--------------------------------------------------------------*/
+
+.mc-form-header {
+	@include floatblock();
+	background:$baby-blue;
+	height: 250px;
+	position:relative;
+	border-top:5px solid $white;
+	box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.1);
+	@include breakpoint($sm-mob, true) {
+		height: 180px;
+	}
+	@include breakpoint($sm-tab, true) {
+		height: 220px;
+	}
+	@include breakpoint($md-desk, true) {
+		height: 180px;
+	}
+	.formhead-icon {
+		top: -42px;
+		background: $white;
+		color: #ef6248;
+		padding: 15px 15px 0;
+		position: absolute;
+		z-index: 1;
+		margin-left: calc(50vw - 36px);
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, -0.006, 0, 0, 1, 0, 0, 0, 0, 1);
+		-webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, -0.008, 0, 0, 1, 0, 0, 0, 0, 1);
+		span {
+			font-size:20px;
+		}
+		img {
+			display: block;
+			max-width: 20px;
+			width: 20px;
+			max-height: 22px;
+			height: 22px;
+		}
+	}
+	.formhead-overflow{
+		overflow:hidden;
+		height: 300px;
+		margin-top:-5px;
+		.formhead-wrap{
+			border-top:0;
+			width:100%;
+			margin:0;
+			text-align:center;
+			background:$white;
+			padding:0 5px 5px;
+			transform:skewY(-2deg);
+			@include breakpoint($sm-tab, true) {
+				max-width:calc(100vw - 27px);
+				margin: auto;
+			}
+			@include breakpoint($md-desk, true) {
+				width:780px;
+			}
+			@include breakpoint($lg-desk, true) {
+				width: 1065px;
+			}
+			.formhead-container{
+				background: #fff;
+				background: linear-gradient(0.5deg, rgba(108, 183, 229, 0.62) 3%,#ddf4ff 20%,#ffffff 42%);
+				padding:20px 20px 0 20px;
+				/* border:1px solid $lt-blue;
+				border-top:0; */
+				margin-top:-25px;
+				overflow:hidden;
+				p{
+					margin: 15px 0 40px 0;
+					padding: 0;
+					transform:skewY(2deg);
+					padding-top:20px;
+					color:$orange3;
+					@include font(400,2.4rem,3.0rem,$aleo);
+					span{
+						display: block;
+						margin: 0 0 10px 0;
+						@include font(400,3.0rem,3.6rem,$aleo-bd);
+						font-style: italic;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.mc-form {
+	@include floatblock();
+	padding: 30px 0 10px 0;
+	background: $baby-blue;
+	color: $white;
+	text-align: center;
+	@include font(400, 1.7rem, 1.9rem, $aleo);
+	@include breakpoint($md-desk, true) {
+		padding-top: 80px;
+	}
+	@include breakpoint($lg-desk, true) {
+		padding-top: 20px;
+	}
+	.mc-madlib {
+		display: inline-block;
+		@include font(400, 1.7rem, 2rem, $aleo);
+		margin-bottom: 25px;
+	}
+	.mc-madlib-br-1 {
+		display: inline;
+		padding: 0 2px;
+		&:after {
+			content:"\A";
+			white-space:pre;
+			@include breakpoint($md-desk, true) {
+				content:none;
+				white-space:none;
+			}
+		}	
+	}
+	.mc-madlib-br-2 {
+		display: inline;
+		padding: 0 2px;
+		&:after {
+			content:"\A";
+			white-space:pre;
+		}
+	}
+	#mc_embed_signup, .mc_embed_signup {
+		.field-wrap {
+			display: inline-block;
+			width: auto;
+		}
+		.mc-FNAME-wrap {
+			width: calc(100% - 91px);
+			@include breakpoint($sm-tab,true) {
+				width: calc(100% - 475px);
+			}
+			@include breakpoint($md-desk,true) {
+				width: auto;
+			}
+		}
+		.mc-LNAME-wrap {
+			width: calc(100% - 20px);
+			@include breakpoint($sm-tab,true) {
+				width: calc(100% - 400px);
+			}
+			@include breakpoint($md-desk,true) {
+				width: auto;
+			}
+		}
+		.mc-email-wrap {
+			width: calc(100% - 142px);
+			@include breakpoint($sm-tab,true) {
+				width: calc(100% - 350px);
+			}
+			@include breakpoint($md-desk,true) {
+				width: auto;
+			}
+		}
+		.mce-CAREER, .mce-OUTCOME {
+			-webkit-appearance:none;
+			color:#fff;
+			background: url("img/dropdown-arrow.png") no-repeat 98% 50% #69b8ea;
+			background-size: 20px;
+			padding-right:30px;
+		}
+		.mce-OUTCOME-wrap {
+			width: calc(100% - 20px);
+			@include breakpoint($sm-mob,true) {
+				width: calc(100% - 115px);
+			}
+			@include breakpoint($sm-tab,true) {
+				width: auto;
+			}
+		}
+		.mce-CAREER-wrap {
+			width: calc(100% - 20px);
+			@include breakpoint($sm-tab,true) {
+				width: auto;
+			}
+		}
+		.ninja-forms-form-wrap {
+			select {
+				&.mce-OUTCOME {
+					width: 100%;
+				}
+			}
+		}
+		.mce_inline_error {
+			border-color: $dk-blue;
+		}
+		form{
+			position:relative;
+		}
+	}
+}
+#mc_embed_signup_scroll{
+	.row{
+		> div{
+			padding: 0 20px;
+			text-align: center;
+		}
+	}
+}
+.rm-padding {
+	.mc-form-header {
+		.formhead-icon {
+			@include breakpoint($sm-tab,true) {
+				margin-left:calc(50% - 35px);
+			} 
+		}
+	}
+	.career-form {
+		@include breakpoint($sm-tab,true) {
+			margin-bottom: 60px;
+			border-bottom: 20px solid $lt-grey;
+		} 
+	}
+}
+
+#mce-success-response, .mce-success-response {
+	display: block;
+	margin-bottom: 20px;
+}
+
+#mc_error_message, .ninja-forms-error-msg {
+	background-color: $orange2;
+	color: $white;
+	text-align: center;
+	padding: 20px;
+	margin: 0 auto 20px;
+	width: 80%;
+	border-radius: 5px;
+	display: none;
+	p {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.ninja-forms-field-error {display: none !important;}
+
+// ARTICLE Form
+
+.campaign-wrap {
+	.mc-form-header {
+		margin-top:20px;
+		.formhead-icon {
+			margin-left:calc(50% - 36px);
+		}
+	}
+	.sidebar-form {
+		float:left;
+		margin-top:40px;
+		padding:15px;
+		display:none;
+		@include breakpoint($md-desk){
+			display:block;
+		}
+		.mc-madlib {
+			margin-bottom:15px;
+		}
+		#ninja_forms_field_81_div_wrap, #ninja_forms_field_75_div_wrap, #ninja_forms_field_78_div_wrap {
+			display:none;
+		}
+	}
+}

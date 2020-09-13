@@ -1,0 +1,118 @@
+/*--------------------------------------------------------------
+## Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'HelveticaNeueLTStd';
+	src: local('HelveticaNeueLT Std'), url('fonts/HelveticaNeueLTStd-Roman.otf') format('opentype');
+}
+@font-face {
+	font-family: 'HelveticaNeueLTStd-Lt';
+	src: local('HelveticaNeueLT Std Lt'), url('fonts/HelveticaNeueLTStd-Lt.otf') format('opentype');
+}
+@font-face {
+	font-family: 'HelveticaNeueLTStd-It';
+	src: local('HelveticaNeueLT Std It'), url('fonts/HelveticaNeueLTStd-It.otf') format('opentype');
+}
+@font-face {
+	font-family: 'HelveticaNeueLTStd-Bd';
+	src: local('HelveticaNeueLt Std Bd'), url('fonts/HelveticaNeueLTStd-Bd.otf') format('opentype');
+}
+@font-face {
+	font-family: 'HelveticaNeueLTStd-Hv';
+	src: local('HelveticaNeueLt Std Hv'), url('fonts/HelveticaNeueLTStd-Hv.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Aleo-Light';
+	src: url('fonts/aleo-light-webfont.eot');
+	src: url('fonts/aleo-light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/aleo-light-webfont.woff') format('woff'),
+		 url('fonts/aleo-light-webfont.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Aleo-Regular';
+	src: url('fonts/aleo-regular-webfont.eot');
+	src: url('fonts/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/aleo-regular-webfont.woff') format('woff'),
+		 url('fonts/aleo-regular-webfont.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Aleo-Bold';
+	src: url('fonts/aleo-bold-webfont.eot');
+	src: url('fonts/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/aleo-bold-webfont.woff') format('woff'),
+		 url('fonts/aleo-bold-webfont.ttf') format('truetype');
+}
+
+// Variables
+
+$hel: 'HelveticaNeueLTStd', Helvetica, sans-serif;
+$hel-lt: 'HelveticaNeueLTStd-Lt', Helvetica, sans-serif;
+$hel-it: 'HelveticaNeueLTStd-It', Helvetica, sans-serif;
+$hel-bd: 'HelveticaNeueLTStd-Bd', Helvetica, sans-serif;
+$hel-hv: 'HelveticaNeueLTStd-Hv', Helvetica, sans-serif;
+$aleo: 'Aleo-Regular', Times, serif;
+$aleo-lt: 'Aleo-Light', Times, serif;
+$aleo-bd: 'Aleo-Bold', Times, serif;
+
+/*--------------------------------------------------------------
+## Default Text/Copy
+--------------------------------------------------------------*/
+
+html {
+	font-size: 50%;
+	font-family: "HelveticaNeueLTStd-Lt", Helvetica, sans-serif;
+	@include breakpoint($sm-tab,true){
+		font-size: 62.5%;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	font-style: normal;
+	clear: both;
+}
+h1 { 
+	@include font(400, 5.6rem, 6.2rem, $aleo);
+	color: $white;
+	text-align: center;
+	@include breakpoint($sm-tab,true){
+		font-size: 6.6rem;
+		line-height: 7.2rem;
+	}
+}
+h2 { 
+	@include font(400, 3.6rem, 4.0rem, $hel-lt);
+	color: $white;
+	margin: 0 0 10px 0;
+}
+h3 { 
+	@include font(400, 2.8rem, 3.4rem, $hel-hv);
+	color: $white;
+	margin: 0 0 8px 0;
+}
+h4 { 
+	@include font(400, 1.6rem, 2.4rem, $hel-hv);
+	color: $white;
+	margin: 0 0 4px 0;
+}
+h5 { 
+	@include font(400, 1.6rem, 2.4rem, $hel-hv);
+	color: $white;
+	margin: 0 0 4px 0;
+}
+h6 { 
+	@include font(400, 1.6rem, 2.4rem, $hel-lt);
+	color: $white;
+	margin: 0 0 4px 0;
+}
+p {
+	@include font(400, 1.6rem, 3.0rem, $hel-lt);
+	color: $white;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+li {
+	@include font(400, 1.6rem, 3.0rem, $hel-lt);
+	color: #5f5f5f;
+	margin: 0 0 20px 0;
+	padding: 0;
+}

@@ -1,0 +1,55 @@
+/*
+*** USE THIS FILE FOR CUSTOM STYLES ***
+* NEW STYLES IN STYLE.CSS WILL BE OVERWRITTEN WITH SASS COMPILATION *
+*/
+
+/* to fix ninja forms accessibility issue where labels are hidden from screenreaders with visibility: hidden, see: https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements  */
+.nf-form-cont .label-hidden .nf-field-label {
+	visibility: visible;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.home .nf-form-title,
+.page-template-page-program .nf-form-title,
+.career-form .nf-form-title,
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.nf-field-container.hidden-container {
+	display: none;
+}
+
+.label-above .nf-field-label {
+	margin-top: 10px;
+}
+
+input#nf-field-262 {
+    color: white;
+    border: 1px solid white;
+    background: #1178be;
+    margin-left: 2px;
+    padding: 6px;
+}
+
+/*div#nf-field-259-wrap {
+	display: block !important;
+}
+
+.mc-form .mc_embed_signup .field-wrap input.full-width {
+	display: block!important;
+}*/

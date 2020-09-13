@@ -1,0 +1,340 @@
+/*--------------------------------------------------------------
+## Landing
+# NOT CURRENTLY USED ANYMORE
+--------------------------------------------------------------*/
+.page-template-page-landing-v2 {
+	.diamond-wrap{
+		padding-top:60px;
+		h1 {
+		    margin: 0 0 40px;
+		    font-size: 5.7rem;
+		    max-width:850px;
+		    margin: 0 auto 40px;
+		    letter-spacing:1px;
+		}
+		img {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			max-width: 250px;
+		}
+	}
+	.career-header{
+		margin:0;
+		font-size: 2.2rem;
+		line-height: 2.2rem;
+		text-align:center;
+		background: #193866;
+		padding: 20px;
+	}
+	.career-wrap{
+		border-top:5px solid $dk-blue;
+		width:100%;
+		float:left;
+		section{
+			border-bottom:0;
+			max-width:1680px;
+			display:block;
+			margin:0 auto;
+			.column-info{
+				padding-top:20px;
+				@include breakpoint($md-desk,true){
+					padding-top:0px;
+				}
+				.info{																																
+					width:100%;
+					margin-bottom:0;
+					.row {
+						margin:0;
+						> div {
+							position:initial;
+						}
+					}
+					h2{
+						padding:20px 0 40px;
+						padding-left:20px;
+						font-size: 4rem;
+						@include breakpoint($sm-tab){
+							padding:20px 0;
+						}
+					}
+					p{
+						font-size: 1.8rem;
+						line-height: 2.5rem;
+					}
+					ul{
+						margin: 40px auto;
+						width:80%;
+						li{
+							margin: 0 0 5px 24px;
+							padding: 5px 0 0px 15px;
+							position: relative;
+							color: $dk-brown;
+							line-height: 1.9rem;
+							font-size:1.9rem;
+							text-shadow: 1px 1px $lt-grey;
+							overflow:hidden;
+							font-weight:700;
+							margin-left: 0;
+							font-size: 1.9rem;
+							line-height: 1.9rem;
+							margin-bottom: 15px;
+							&:before{
+								content:"\f178";
+								font-family:FontAwesome;
+								color:$orange2;
+								position: absolute;
+								top: 0.3rem;
+								left: -6px;
+							}
+							span{
+								font-weight:400;
+								white-space: nowrap;
+							}
+						}
+					}
+				}
+				img{
+					display:none;
+					width: auto;
+					right: 0;
+					max-height: 500px;
+					bottom: 0;
+					left:initial;
+					@include breakpoint($lg-desk){
+						display:block;
+					}
+				}
+			}
+			.column-stats{
+				width:100%;
+				@include breakpoint($sm-tab,true){
+					width: 100%;
+				}
+				@include breakpoint($md-desk,true){
+					width: 33.33%;
+				}
+				.qualifications{
+					width:100%;
+					margin:0 auto;
+					padding-top:20px;
+					@include breakpoint($md-desk,true){
+						width: 90%;
+					}
+					h3{
+						font-size: 4rem;
+						line-height: 5rem;
+					}
+					p{
+						font-size: 1.8rem;
+						line-height: 2.6rem;
+					}
+				}
+			}
+		}
+	}
+	#cta-bar{
+		float: left;
+		width: 100%;
+		background: #ed4b2e; /* Old browsers */
+		background: -moz-linear-gradient(-45deg, #ff5c12 0%, #ff5b32 47%, #ed4b2e 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(-45deg, #ff5c12 0%,#ff5b32 47%,#ed4b2e 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(135deg, #ff5c12 0%,#ff5b32 47%,#ed4b2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5c12', endColorstr='#ed4b2e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		border-top: 2px solid #ed4b2e;
+		border-bottom: 2px solid #ed4b2e;
+		position: fixed;
+		bottom: 0;
+		z-index: 999;
+		cursor:pointer;
+		@include breakpoint($md-desk, true){
+			position:relative;
+			bottom:initial;
+			z-index:1;
+			cursor:arrow;
+		}
+		a{
+			text-align: center;
+			padding:20px 0;
+			margin: 0 auto;
+			display: block;
+			position:relative;
+			@include font(400, 1.0rem, 1, $aleo);
+			padding-right:56px;
+			color:$white;
+			@include breakpoint($sm-tab,true){
+				padding-right:0px;
+			}
+			@include breakpoint($md-desk){
+				font-size: 2rem;
+			}
+			// a{
+			// 	color:$white;
+			// 	right: 0;
+			// 	position: absolute;
+			//     top: calc(50% - 18px);
+			// 	@include breakpoint($sm-tab,true){
+			// 		position:relative;
+			// 		right:initial;
+			// 		top:initial;
+			// 	} 
+			// }
+			.fa{
+				padding: 10px;
+				border-radius: 50%;
+				border: 1px solid $white;
+				margin-left: 10px;
+				transition:0.2s all ease-in-out;
+			}
+			&:hover{
+				.fa{
+					background:$white;
+					color:$orange;
+					cursor:pointer;
+				}
+			}
+		}
+	}
+	#main{
+		div.diamond-wrap{
+			padding:0;
+			.quote-wrap{
+				background: rgba(41,72,116,0.66);
+				color: white;
+				padding: 60px 0;
+				clear: both;
+				text-align:center;
+				blockquote{
+					font-style:italic;
+					font-size:2.2rem;
+					line-height:2.8rem;
+					letter-spacing:1px;
+					margin-bottom:20px;
+				}
+				cite{
+					color: $orange;
+					@include font(400, 1.9rem, 1.9rem, $aleo);
+					text-align:center;
+				}
+			}
+		}
+	}
+	.blue-wrap{
+		padding:8rem 0;
+		clear:both;
+		background: $baby-blue2;
+		.container{
+			@include breakpoint($lg-desk,true){
+			    width: 100%;
+			    min-width: 1170px;
+			    max-width: 1280px;
+			}
+		}
+		h3{
+			color:$dk-blue;
+			width: 100%;
+			margin: 0 auto 20px;
+			@include font(400, 2.8rem, 2.8rem, $aleo-bd);
+			@include breakpoint($md-desk,true){
+				width: 85%;
+				width: calc(80% + 97px);
+			}
+			&:before{
+				content: '\f046';
+				font-family: 'FontAwesome';
+				display: inline-block;
+				padding-right: 20px;
+			}
+		}
+		p,ul{
+			color:$dk-brown;
+			width: 85%;
+			margin: 1rem auto;
+			font-size:1.8rem;
+			@include breakpoint($md-desk,true){
+				margin: 1rem 0rem 1rem 9.5rem;
+			}
+		}
+		ul{
+			padding: 0 16px;
+			li{
+				color:$dk-brown;
+				margin-bottom:10px;
+				font-size:1.8rem;
+			}
+		}
+		hr{
+			margin: 4rem;
+			border-width: 0;
+			border:0;
+			border-top: 1px solid #999999;
+		}
+		.form-wrapper{
+			margin: 0 auto;
+		    position: fixed;
+		    z-index: 888;
+		    display:none;
+		    height:100vh;
+		    height:calc(100vh - 60px);
+			left:0;
+			bottom: 0;
+			margin-bottom: 60px;
+			width: 100%;
+			background: #ebebeb;
+		    @include breakpoint($md-desk,true) {
+		    	max-width: 650px;
+		    	position:relative;
+		    	bottom:initial;
+		    	z-index:1;
+		    	display:block;
+		    	padding-top: 10%;
+		    	height:auto;
+		    	background:none;
+		    }
+			.form-header{
+				margin:0;
+				font-size: 2.2rem;
+				line-height: 2.8rem;
+				text-align:center;
+				background: #193866;
+				padding: 20px;
+				color:$white;
+				width:100%;
+			}
+			.ninja-forms-cont{
+				width: 100%;
+				background: #ebebeb;
+				padding: 20px;
+				margin-bottom:20px;
+				@include breakpoint($md-desk,true) {
+					margin-bottom: 0;
+				}
+				.ninja-forms-required-items{
+					display:none;
+				}
+				label{
+					font-size:1.5rem;
+				}
+				input[type="text"],
+				input[type="email"],
+				input[type="url"],
+				input[type="password"],
+				input[type="search"],
+				textarea, select {
+					color: $white;
+					background: $baby-blue;
+					margin-left: 2px;
+					padding: 6px;
+					font-size: 1.5rem;
+					border: 0;
+				}
+			}
+		}
+	}
+	#footer{
+		border-top:0;
+	}
+	.back-to-top{
+		display:none !important;
+	}
+}

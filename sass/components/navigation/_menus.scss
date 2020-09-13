@@ -1,0 +1,90 @@
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+#home-menu, #hs-menu {
+	@include floatblock();
+	margin: 0 auto 50px;
+	ul {
+		display: block;
+		list-style-type: none;
+		margin: 0 auto;
+		li {
+			display: block;
+			text-transform: uppercase;
+			text-align: center;
+			background: $white;
+			margin: 20px 0;
+			padding: 0;
+			width: 100%;
+			@include font(400,1.4rem,1.8rem,$aleo-bd);
+			a {
+				display:block;
+				@include breakpoint($sm-tab, true) {
+					display: table-cell;
+				}
+				width: 100%;
+				padding: 15px 5%;
+				border: 2px solid white;
+				text-decoration: none;
+				vertical-align:middle;
+				&:hover {
+					border-color: $orange;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+#home-menu {
+	ul {
+		li {
+			@include breakpoint($sm-tab, true) {
+				display: table;
+				float:left;
+				width: 48%;
+				height:70px;
+				margin: 1%;
+			}
+			@include breakpoint($md-desk){
+				width:30%;
+			}
+			&:nth-child(4){
+				@include breakpoint($md-desk,true){
+					margin-left:178px;
+				}
+				@include breakpoint($lg-desk, true) {
+					margin-left:215px;
+				}
+			}
+			&:nth-child(5){
+				@include breakpoint($sm-tab){
+					margin-left:180px;
+				}
+				@include breakpoint($md-desk){
+					margin-left:1%;
+				}
+			}
+		}
+	}
+}
+
+#hs-menu {
+	ul {
+		li {
+			@include breakpoint($sm-tab, true) {
+				display: table;
+				float:left;
+				width: 48%;
+				height:70px;
+				margin: 1%;
+			}
+			@include breakpoint($md-desk){
+				width:23%;
+			}
+			&:nth-child(4){
+			}
+		}
+	}
+}

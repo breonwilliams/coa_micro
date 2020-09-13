@@ -1,0 +1,36 @@
+@-webkit-keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; } }
+
+.fade-in {
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-delay: 0s;
+	-moz-animation-delay: 0s;
+	animation-delay: 0s;
+}
+
+
+@-webkit-keyframes barber {
+    from { background-position: 1% 0, 99% 0; }
+    to { background-position: 1% 200px, 99% 200px; }
+}
+@-webkit-keyframes h-grower {
+    from { height: 0; }
+    to { height: 100%; }
+}
+@-webkit-keyframes w-grower {
+    from { width: 0; left: 50%; }
+    to { width: 100%; left: 0; }
+}

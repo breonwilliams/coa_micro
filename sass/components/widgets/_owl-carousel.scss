@@ -1,0 +1,54 @@
+/*** OWL CAROUSEL BASE ***/
+.owl-carousel {
+	.owl-item {
+
+	}
+	.owl-controls {
+		.owl-pagination {
+			.owl-page {
+				span {
+					
+				}
+			}
+		}
+		.owl-buttons {
+			div {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 30%;
+				background: none;
+				color: $white;
+				font-size: 7.4rem;
+				line-height: normal;
+				border-radius: 30px;
+				opacity: 0.5;
+				zoom: 1;
+				&.owl-prev {
+					left: 0;
+				}
+				&.owl-next {
+					right: 0;
+				}
+			}
+		}
+	}
+}
+.view.orange {
+	.owl-controls {
+		.owl-pagination {
+			display: none;
+			.owl-page {
+				span {
+					background: $orange;
+				}
+			}
+		}
+		.owl-buttons {
+			div {
+				color: $dk-blue;
+			}
+		}
+	}
+}

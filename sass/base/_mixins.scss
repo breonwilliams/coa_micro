@@ -1,0 +1,129 @@
+@mixin floatblock($dir:left, $width:100%){
+	display: block;
+	float: $dir;
+	width: $width;
+}
+
+@mixin centerblock($maxwidth){
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	max-width: $maxwidth;
+}
+
+@mixin font($weight, $size, $lineheight, $stack){
+	font-family: $stack;
+	font-size: #{$size};
+	line-height: $lineheight;
+	font-weight: #{$weight};
+}
+
+@mixin sect-shadow() {
+	-webkit-box-shadow: inset 0px -2px 14px 0px gray;
+	-moz-box-shadow: inset 0px -2px 14px 0px gray;
+	box-shadow: inset 0px -2px 14px 0px gray;
+}
+
+@mixin gradient($start,$end){
+	background-color: $end; // Old browsers
+	@include filter-gradient($start, $end, horizontal); // IE6-9
+	background-image: -ms-linear-gradient(left, $start 0%, $end 60%);
+	@include background-image(linear-gradient(left,  $start 0%,$end 60%));
+}
+
+@mixin gradient-v($start,$end){
+	background-color: $end; // Old browsers
+	@include filter-gradient($start, $end, vertical); // IE6-9
+	background-image: -ms-linear-gradient(top, $start 0%, $end 60%);
+	@include background-image(linear-gradient(top,  $start 0%,$end 60%));
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+	 -moz-border-radius: $radius;
+		  border-radius: $radius;
+}
+
+@mixin arrowafter(){
+	content: '\f04b';
+	font-family: FontAwesome;
+	font-size: 8px;
+	padding-left: 10px;
+	position: absolute;
+	top: calc(50% - 4px);
+	right: 5px;
+	color: $green;
+}
+
+@mixin keyframe ($animation_name) {
+	@-webkit-keyframes $animation_name {
+		@content;
+	}
+
+	@-moz-keyframes $animation_name {
+		@content;
+	}
+
+	@-o-keyframes $animation_name {
+		@content;
+	}
+
+	@keyframes $animation_name {
+		@content;
+	}
+}
+
+@mixin animation ($name, $duration, $timing, $delay:"0") {
+	-webkit-animation-name: $name;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-timing-function: $timing;
+	-webkit-animation-delay: $delay;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	
+	-moz-animation-name: $name;
+	-moz-animation-duration: $duration;
+	-moz-animation-timing-function: $timing;
+	-moz-animation-delay: $delay;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-direction: normal;
+	
+	-o-animation-name: $name;
+	-o-animation-duration: $duration;
+	-o-animation-timing-function: $timing;
+	-o-animation-delay: $delay;
+	-o-animation-iteration-count: 1;
+	-o-animation-direction: normal;
+	
+	animation-name: $name;
+	animation-duration: $duration;
+	animation-timing-function: $timing;
+	animation-delay: $delay;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+}
+
+@mixin transition($time,$type,$element:"all"){
+	-webkit-transition:	$element $time $type;
+	-moz-transition: $element $time $type;
+	-o-transition: $element $time $type;
+	transition:	$element $time $type;
+}
+
+
+/* --------------------------------------------------------------
+//Mixin for Input-Placeholder text 
+--------------------------------------------------------------*/
+
+@mixin input-placeholder($all:default){
+    @if $all == default {
+        $all : ("::-webkit-input-placeholder", ":-moz-placeholder","::-moz-placeholder",":-ms-input-placeholder");
+    }
+    @each $placeholder in $all {
+        #{unquote($placeholder)}{
+            @content;
+        }
+    }
+}

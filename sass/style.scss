@@ -1,0 +1,103 @@
+// Import external libraries.
+
+@import "compass";
+@import "breakpoint";
+@import "compass/reset";
+@import "base/*";
+@import "components/**/*";
+@import "layouts/*";
+
+// Misc global styles
+
+
+#main {
+	.diamond-wrap {
+		@include floatblock();
+		padding-top: 80px;
+		background: url(img/diamonds/1-bg-diamond-xxl.gif) no-repeat center center scroll; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+.home {
+	h1 {
+		margin: 30px 0 40px 0;
+	}
+	.diamond-wrap {
+		p {
+			margin: 0 0 20px 0;
+			font-size: 2.2rem;
+			line-height: 3.2rem;
+			text-align:center;
+			@include breakpoint($sm-tab,true) {
+				margin-bottom: 35px;
+			}
+		}
+	}
+}
+
+.thank-you-content-wrap {
+	@include floatblock();
+	padding: 50px 0 30px 0;
+	background: #fff;
+	p {
+		color: $dk-brown;
+		text-align: center;
+		font-size: 2.0rem;
+		line-height: 1.4;
+	}
+	.search-submit {
+		display: block;
+		margin: 20px 0 30px 0;
+	}
+	.search-field {
+		margin: 0 0 0 10px;
+	}
+}
+
+.no-results,
+.not-found {
+	.page-content {
+		p {
+			color: $dk-brown;
+		}
+	}
+}
+a {
+	&.back-to-top{
+	   display: none;
+	   position: fixed;
+	   right: 20px;
+	   bottom: 20px;
+	   width: 50px;
+	   height: 50px;
+	   padding: 24px 0 0 0;
+	   border: 3px solid $orange2;
+	   border-radius: 50%;
+	   z-index: 9999;
+	   -webkit-transition: background 0.3s;
+	   -moz-transition: background 0.3s;
+	   -o-transition: background 0.3s;
+	   transition: background 0.3s;
+		&:after{
+			content: '\f062';
+			position: absolute;
+			top: 5px;
+			left: 6px;
+			padding: 0;
+			color: $orange2;
+			font-family: FontAwesome;
+			font-size: 34px;
+			font-style: normal;
+		}
+		&:hover{
+			background: $orange2;
+			&:after {
+				color: white;
+			}
+		}
+	}
+}

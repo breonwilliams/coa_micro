@@ -1,0 +1,68 @@
+/*** UI ACCORDION BASE ***/
+.ui-accordion {
+	.views-row {
+		border-bottom: 1px solid #5e697d;
+	}
+	.ui-accordion-header {
+		padding: 20px 0 20px 0;
+		background: $dk-blue;
+		border: none;
+		&.ui-state-active {
+			border-bottom: none;
+		}
+		span.ui-icon {
+			display: none;
+		}
+		a {
+			display: block;
+			position: relative;
+			text-align: left;
+			i.fa {
+				position: absolute;
+				top: 3px;
+				left: 0;
+				font-size: 2.4rem;
+				color: $orange;
+			}
+			h3 {
+				display: inline-block;
+				margin: 0 0 8px 45px;
+				@include font(400, 2.4rem, 3.2rem, $hel-lt);
+				color: $white;
+				text-align: left;
+			}
+			h4 {
+				display: inline-block;
+				margin: 0 0 0 10px;
+				@include font(400, 1.4rem, 2.0rem, $hel-hv);
+				color: $white;
+				text-align: left;
+				text-transform: uppercase;
+			}
+			&:after {
+				content: "\f078";
+			    font-family: FontAwesome;
+			    font-style: normal;
+			    font-weight: normal;
+			    font-size: 2.4rem;
+			    color: $white;
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			}
+		}
+		
+	}
+	.ui-accordion-content {
+		padding: 0 0 0 45px;
+		background: $dk-blue;
+		text-align: left;
+		border: none;
+		p {
+			color: $white;
+		}
+		a {
+			color: $white;
+		}
+	}
+}

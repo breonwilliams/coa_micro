@@ -1,0 +1,41 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea, select {
+	color: $white;
+	border: 1px solid $white;
+	background: $baby-blue;
+	margin-left: 2px;
+	padding: 6px;
+}
+
+textarea {
+	padding-left: 3px;
+	width: 100%;
+}
+.mc-form{
+	select{
+		option{
+			&:first-child{
+				display:none;
+			}
+		}
+	}
+	option{}
+}
+input {
+	&::-webkit-input-placeholder {
+		color: $placeholder-transparency;
+	}
+	&:-moz-placeholder {
+		color: $placeholder-transparency;
+	}
+	&::-moz-placeholder {
+		color: $placeholder-transparency;
+	}
+	&:-ms-input-placeholder {
+		color: $placeholder-transparency;
+	}
+}

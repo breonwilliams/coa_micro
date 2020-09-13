@@ -1,0 +1,820 @@
+/*--------------------------------------------------------------
+## Career/Pathways
+--------------------------------------------------------------*/
+
+*{
+	box-sizing:border-box;
+}
+.archive-header {
+	.taxonomy-description {
+		p {
+			text-align: center;
+			margin: 45px 0 55px 0;
+			@include font(400,2.2rem,3.2rem,$hel-lt);
+		}
+	}
+}
+.toggle-parent{
+	&.careers-menu {
+		display: block;
+		padding-bottom: 100px;
+		@include breakpoint($md-desk,true) {
+			/* display: block; */
+		}
+		.toggle-content {
+			display: block;
+			background-color: $baby-blue2;
+			margin: 0 5% 5%;
+			transition: height 2s;
+			@include breakpoint($md-desk,true){
+				margin: 0 0 5%;
+				@include floatblock();
+				background-color: initial;
+			}
+			ul {
+				display: none;
+				list-style-type: none;
+				margin: 0;
+				@include breakpoint($md-desk,true){
+					display:block;
+				}
+				li {
+					border-bottom: 1px solid $dk-grey;
+					margin: 0;
+					@include breakpoint($md-desk,true){
+						@include font(400,1.3rem,1.8rem,$aleo-bd);
+						text-transform: uppercase;
+						text-align: center;
+						background: $white;
+						padding: 0;
+						display: table;
+						float:left;
+						width: 19%;
+						height:60px;
+						margin: 0.5%;
+						border-bottom:none;
+					}
+					a {
+						display: block;
+						padding: 15px;
+						color: $dk-blue;
+						@include breakpoint($md-desk,true){
+							display:table-cell;
+							width: 100%;
+							padding: 5px 2%;
+							border: 2px solid white;
+							text-decoration: none;
+							vertical-align:middle;
+							color:$orange;
+						}
+						&:hover {
+							background-color: $off-white;
+							text-decoration: none;
+							@include breakpoint($md-desk,true){
+								border-color: $orange;
+								text-decoration: none;
+								background-color:$white;
+							}
+						}
+					}
+				}
+			}
+			&.ps-menu {
+				@include breakpoint($md-desk,true){
+					li {
+						width:24%;
+						&:nth-child(5) {
+							margin-left:125px;
+						}
+					}
+				}
+			}
+			&.it-menu {
+				@include breakpoint($md-desk,true){
+					li {
+						width:32.368%;
+					}
+				}
+			}
+			&.hs-menu {
+				@include breakpoint($md-desk,true){
+					li {
+						width:15.701%;
+						&:nth-child(7) {
+							margin-left:100px;
+						}
+					}
+				}
+			}
+		}
+		&.open {
+			.toggle-content {
+				/* display: block; */
+			}
+		}
+	}
+	.toggle{
+		border: 0px solid $white;
+		background:$dk-blue;
+		padding:5px;
+		display:block;
+		float:left;
+		width:90%;
+		margin:0 5% 2px;
+		padding:5px 15px;
+		box-shadow:0px 1px 5px rgba(0,0,0,0.2);
+		position:relative;
+		cursor:pointer;
+		color:$white;
+		@include font(400,2.2em,2em,$aleo);
+		@include breakpoint($md-desk,true){
+			margin:0;
+			display:none;
+		}
+		&:after{
+			content:"\f055";
+			font-family:FontAwesome;
+			color:$white;
+			position:absolute;
+			right:10px;
+		}
+	}
+	.toggle-content{
+		display:none;
+		float:left;
+		width:90%;
+		margin:1% 5%;
+		@include breakpoint($md-desk,true){
+			display:block;
+			width: 100%;
+			margin: 0;
+		}
+	}
+	&.open{
+		/* .toggle{
+			&:after{
+				content:"\f056";
+			}
+		} */
+		.toggle-content{
+			@include breakpoint($sm-tab,true){
+				display: block;
+			}
+		}
+	}
+	&.minus-icon{
+		.toggle{
+			&:after{
+				content:"\f056";
+			}
+		}
+	}
+}
+.career-wrap {
+	text-align: center;
+	section {
+		display:block;
+		float:left;
+		width:100%;
+		max-width: $xl-desk;
+		text-align: left;
+		border-bottom:3px solid $dk-blue;
+		@include breakpoint($xl-desk,true){
+			display: inline-block;
+			float: none;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+		ul {
+			list-style-type: none;
+		}
+		.column-info{
+			display:block;
+			float:left;
+			width:100%;
+			position:relative;
+			background:$off-white;
+			@include breakpoint($md-desk,true){
+				width:66.66%
+			}
+			.bk-img{
+				position:absolute;
+				left:0;
+				min-width:200px;
+				max-width:55%;
+				bottom:0;
+				@include breakpoint($md-desk,true){
+					width:auto;
+				}
+			}
+			h2{
+				color:$dk-grey2;
+				font-size:20px;
+				text-shadow:2px 2px $white;
+				float:right;
+				width:100%;
+				position:relative;
+				z-index:1;
+				padding:20px 5% 0;
+				margin-bottom: 0;
+				@include font(400,4.2rem,3.8rem,$aleo);
+				span{
+					font-size:18px;
+				}
+				@include breakpoint($sm-tab,true){
+					margin: 10px 0 10px;
+					text-align:left;
+					@include font(400,5.2rem,5rem,$aleo);
+					span{
+						font-size:30px;
+					}
+				}
+			}
+			.info{
+				display:block;
+				float:right;
+				width:100%;
+				color:$dk-grey2;
+				position:relative;
+				z-index:1;
+				margin: 0 0 75px 0;
+				@include breakpoint($sm-tab,true){
+					width: 75%;
+					margin-top: 20px;
+					margin-bottom:20px;
+					padding:0 5%;
+				}
+				@include breakpoint($md-desk,true){
+					width: 45%;
+					padding:0 5%;
+				}
+				p{
+					color: $dk-brown;
+					width:90%;
+					margin:15px 5%;
+					@include font(400,2rem,2.9rem,$hel-lt);
+					@include breakpoint($md-desk,true){
+						width:auto;
+						margin:0;
+						@include font(400,1.5rem,1.9rem,$hel-lt);
+					}
+				}
+				.jobs{
+					ul{
+						margin-top:10px;
+						@include breakpoint($sm-tab,true){
+							width: 100%;
+							margin: 20px 0 0 0;
+						}
+						li{
+							display:block;
+							float:left;
+							width:50%;
+							padding:5px 0;
+							color:$orange2;
+							margin:0;
+							@include breakpoint($sm-tab,true){
+								padding: 0;
+								margin: 0;
+								min-height: 32px;
+								@include font(400,1.5rem,1.5rem,$hel-lt);
+							}
+							&:nth-child(odd) {
+								@include breakpoint($sm-tab,true){
+									width: 47.5%;
+									padding-right: 2.5%
+								}
+							}
+							&:nth-child(even) {
+								@include breakpoint($sm-tab,true){
+									width: 47.5%;
+									padding-left: 2.5%
+								}
+							}
+						}
+					}
+				}
+			}
+			.programs{
+				display:block;
+				float:left;
+				width:100%;
+				margin-bottom: 50px;
+				@include breakpoint($sm-tab,true){
+					
+				}
+				h3{
+					display: none;
+					color: #193866;
+					@include font(400,2.8rem,3.8rem,$aleo-lt);
+					@include breakpoint($md-desk,true){
+						display: block;
+						margin-bottom: 0;
+					}
+				}
+				ul{
+					margin: 0 0 0 0;
+					li{
+						margin: 0 0 5px 24px;
+						padding: 5px 0 0px 10px;
+						position: relative;
+						color: $dk-brown;
+						font-size: 1.4rem;
+						line-height: 1.9rem;
+						text-shadow: 1px 1px $lt-grey;
+						overflow:hidden;
+						@include breakpoint($sm-tab,true){
+							margin-left: 0;
+							line-height: 1.6rem;
+						}
+						&:before{
+							content:"\f178";
+							font-family:FontAwesome;
+							color:$orange2;
+							position: absolute;
+							top: auto;
+							left: -6px;
+						}
+						span{
+							color: #7b7067;
+							font-size:12px;
+							white-space: nowrap;
+							&:before{
+								content:"\f017";
+								font-family:FontAwesome;
+								color:$orange2;
+								padding-left:10px;
+								padding-right:3px;
+							}
+						}
+					}
+				}
+				.toggle-content {
+					margin-top: 5px;
+				}
+			}
+		}
+		.column-stats{
+			display:block;
+			float:right;
+			width:100%;
+			background:$white;
+			padding:20px;
+			@include breakpoint($sm-tab,true){
+				width: 33.33%;
+			}
+			> div{
+				border-bottom:1px solid $grey;
+				display:block;
+				float:left;
+				position:relative;
+				width:100%;
+				margin:0;
+				padding:20px;
+				@include breakpoint($sm-tab,true){
+					width:-webkit-calc(100% - 100px);
+					width:calc(100% - 100px);
+					margin:0 55px;
+				}
+				h3{
+					margin-bottom: 20px;
+					text-align:center;
+					color: #193866;
+					@include font(400,2.8rem,3rem,$aleo-bd);
+				}
+				&.salary{
+					padding-bottom:30px;
+					@include breakpoint($sm-mob,true){
+						width: 50%;
+						float: left;
+						border-bottom: 0;
+					}
+					@include breakpoint($sm-tab,true){
+						width: 100%;
+						float: none;
+						margin: 0;
+						padding-bottom:120px;
+						border-bottom:1px solid $grey;
+					}
+					hr{
+						background: none;
+						border:0;
+						border-top:1px solid $grey;
+						top:110px;
+						margin:0 18px;
+						width:100%;
+						width:-webkit-calc(100% - 76px);
+						width:calc(100% - 76px);
+						position:absolute;
+						&::before{
+							content:"\f1db";
+							font-family:FontAwesome;
+							color:$grey;
+							font-size:24px;
+							position:absolute;
+							left:-19px;
+							top:-13px
+						}
+						&::after{
+							content:"\f1db";
+							font-family:FontAwesome;
+							color:$grey;
+							font-size:24px;
+							position:absolute;
+							right:-19px;
+							top:-13px;
+						}
+					}
+					ul{
+						display:block;
+						float:left;
+						width:100%;
+						height:112px;
+						z-index:1;
+						margin: 0 auto;
+						position:relative;
+						background:url('img/careers/orange.png') center 22px no-repeat;
+						background-size:162px 56px; // initial = 180px 62px
+						@include breakpoint($sm-tab,true){
+							background-size: 170px 59px;
+						}
+						li{
+							text-align:center;
+							display:block;
+							float:left;
+							width:33.3333%;
+							position:relative;
+							h4{
+								@include font(400,2rem,2rem,$hel);
+								color:$orange2;
+								@include breakpoint($sm-tab,true){
+									@include font(400,1.5rem,2rem,$hel);
+								}	
+							}
+							p{
+								display: block;
+								position:absolute;
+								top:27px;
+								color:$white;
+								width:100%;
+								text-align:center;
+								@include font(400,3rem,3.5rem,$aleo);
+								@include breakpoint($sm-tab,true){
+									top: 33px;
+									@include font(400,2rem,2rem,$hel);
+								}
+							}
+							&:first-child{
+								text-align:left;
+								h4{
+									margin-top:93px;
+									@include font(400,1.8rem,2rem,$hel);
+									@include breakpoint($sm-tab,true){
+										margin-top: 0;
+										@include font(400,1.5rem,2rem,$hel);
+									}
+								}
+								p{
+									font-size:18px;
+									color:$black;
+									position:absolute;
+									top:75px;
+									text-align:left;
+									font-size:14px;
+									margin-left: 0;
+									@include font(400,1.8rem,2rem,$hel);
+									@include breakpoint($sm-tab,true){
+										top:80px;
+										@include font(400,1.5rem,2rem,$hel);
+									}
+								}
+							}
+							&:last-child{
+								text-align:right;
+								h4{
+									margin-top:93px;
+									@include font(400,1.8rem,2rem,$hel);
+									@include breakpoint($sm-tab,true){
+										margin-top: 0;
+										@include font(400,1.5rem,2rem,$hel);
+									}
+								}
+								p{
+									color:$black;
+									position:absolute;
+									top:75px;
+									text-align:right;
+									margin-left: 0;
+									@include font(400,1.8rem,2rem,$hel);
+									@include breakpoint($sm-tab,true){
+										top:80px;
+										@include font(400,1.5rem,2rem,$hel);
+									}
+								}
+							}
+						}
+					}
+				}
+				&.outlook{
+					@include breakpoint($sm-mob,true){
+						width: 50%;
+						float: left;
+						border-bottom: 0;
+					}
+					@include breakpoint($sm-tab,true){
+						width: 100%;
+						float: none;
+						margin: 0;
+					}
+					.stat{
+						margin-top:20px;
+						p{
+							text-align:center;
+							color:$orange2;
+							&.number{
+								@include font(400,62px,52px,$aleo);
+								margin: 0;
+							}
+							&.byline{
+								@include font(400,32px,32px,$aleo);
+								margin: 0;
+							}
+							&.byline-2{
+								font-size:14px;
+								line-height:24px;
+								color:initial;
+								margin: 0;
+							}
+						}
+					}
+				}
+				&.qualifications{
+					padding: 30px 20px 20px;
+					@include breakpoint($sm-tab,true){
+						width: 100%;
+						float: none;
+						margin: 0;
+						padding-top: 40px;
+					}
+					p{
+						margin:20px 0 0 0;
+						text-align:center;
+						color: $black;
+						@include font(400,1.9rem,2.8rem,$hel-lt);
+						@include breakpoint($sm-tab,true){
+							@include font(400,1.5rem,1.9rem,$hel-lt);
+						}
+					}
+				}
+				&:last-child{
+					border:none;
+					@include breakpoint($sm-mob,true){
+						border-top: 1px solid $grey; 
+					}
+				}
+			}
+		}
+		&.dark{
+			.column-info{
+				float:right;
+				position:relative;
+				background:$baby-blue2;
+				.bk-img{
+					right:0;
+					left:inherit;
+				}
+				h2{
+					color:$white;
+					text-shadow:2px 2px $dk-shadow;
+					float:left;
+					@include breakpoint($md-desk,true){
+						text-align:right;
+					}
+				}
+				.info{
+					float:left;
+					.jobs{
+						.toggle{
+							border: 1px solid $dk-blue;
+							color: $dk-blue;
+							&:after{
+								color:$dk-blue;
+							}
+						}
+						ul{
+							li{
+								color: #052048;
+								a{
+									color: #052048;
+								}
+							}
+						}
+					}
+					.programs{
+						h3 {
+							color: #052048;
+						}
+						.toggle{
+							border: 1px solid $dk-blue;
+							color: $dk-blue;
+							&:after{
+								color:$dk-blue;
+							}
+						}
+						ul{
+							li{
+								text-shadow: 1px 1px $baby-blue2;
+								&:before{
+									color: #052048
+								}
+								a{
+									color:$dk-blue;
+								}
+								span {
+									color: #564b42;
+								}
+							}
+						}
+					}
+				}
+			}
+			.column-stats{
+				background:$lt-blue;
+				float:left;
+				> div{
+					h3 {
+						color: #052048;
+					}
+					&.salary{
+						hr{
+							border-top:1px solid $white;
+							&:before{
+								color:$white;
+							}
+							&:after{
+								color:$white;
+							}
+						}
+						ul{
+							background:url('img/careers/blue.png') center 22px no-repeat;
+							background-size:162px 56px; // initial = 180px 62px
+							@include breakpoint($sm-tab,true){
+								background-size: 170px 59px;
+							}
+							li{
+								h4{
+									color:$white;
+								}
+								p{
+									color:$white;
+								}
+								&:first-child{
+									p{
+										color:$white;
+									}
+								}
+								&:last-child{
+									p{
+										color:$white;
+									}
+								}
+							}
+						}
+					}
+					&.outlook{
+						.stat{
+							p{
+								color:$white;
+							}
+						}
+					}
+					&.qualifications{																																																								
+						p{
+							color:$white;
+						}
+					}
+				}
+			}
+			.button{
+				float:left;
+			}
+		}
+		.toggle-parent{
+			.toggle{
+				border:1px solid $orange2;
+				background:$white;
+				color:$orange2;
+				&:after{
+					color:$orange2;
+				}
+			}
+		}
+		a.button{
+			display: inline-block;
+			float:right;
+			width:auto;
+			padding: 15px 20px;
+			color:$white;
+			background:$orange2;
+			text-align:center;
+			text-transform:uppercase;
+			text-decoration:none;
+			margin:15px 5%;
+			box-shadow:2px 2px 5px rgba(0,0,0,0.4);
+			@include font(400,1.6rem,2.0rem,$aleo-bd);
+			@include breakpoint($md-desk,true){
+				margin: 15px 0;
+				padding-right: 80px;
+				padding-left: 80px;
+				float: left;
+			}
+			&:hover {
+				background: #d74227;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.coa-program-list {
+	background-color: $lt-grey;
+	padding: 15px 0 60px;
+	@include breakpoint($sm-tab,true){
+		margin-top: 80px;
+		padding-top: 40px;
+	}
+	h3 {
+		margin: 0 0 8px 0;
+		padding: 15px;
+		text-align: center;
+		color: $blue;
+		@include font(400,3.6rem,4.2rem,$aleo);
+		@include breakpoint($sm-tab,true){
+			padding: 0 0 40px;
+		}	
+	}
+	h4 {
+		display: none;
+		color: $black;
+		@include font(400,2.5rem,3rem,$hel-lt);
+		@include breakpoint($md-desk,true){
+			display: block;
+			padding-left: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	ul {
+		list-style-type: none;
+		margin: 15px 0;
+		@include breakpoint($sm-tab,true){
+			margin: 0 0 0 5px;
+		}
+		li {
+			padding: 4px 0 0 12px;
+			position: relative;
+			overflow:hidden;
+			text-align: left;
+			margin: 0;
+			@include font(400,1.6rem,2.2rem,$hel);
+			@include breakpoint($sm-tab,true){
+				@include font(400,1.3rem,1.9rem,$hel);
+				margin: 0 15px;
+			}
+			&:before{
+				content:"\f178";
+				font-family:FontAwesome;
+				color:$orange2;
+				position: absolute;
+				top: auto;
+				left: -6px;
+			}
+		}
+	}
+	.toggle-parent {
+		.toggle {
+			margin: 0 0 2px;
+			width: 100%;
+		}
+		.toggle-content {
+			@include breakpoint($sm-tab) {
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+		}
+	}
+	.col-xs-12:last-child {
+		.toggle-content {
+			margin-bottom: 0;
+		}	
+	}
+	.footnote {
+		margin-top: 20px;
+		color: $dk-brown;
+		text-align: center;
+		@include font(400,1.6rem,2.2rem,$hel-it);
+		@include breakpoint($sm-tab,true){
+			@include font(400,1.3rem,1.9rem,$hel-it);
+		}
+	}
+}
+
+.rm-padding {padding:0;}

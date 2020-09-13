@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+#masthead {
+	position: relative;
+	background-color: $dk-blue;
+	width: 100%;
+	height: 64px;
+	@include breakpoint($sm-mob,true) {
+		height: 83px;
+	}
+	.logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}

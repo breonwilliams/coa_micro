@@ -1,0 +1,151 @@
+/*--------------------------------------------------------------
+## Article/Campaign Pages
+--------------------------------------------------------------*/
+
+.campaign-header {
+	h2 {
+		text-align: center;
+		@include font(400,2em,3em,$hel-lt);
+	}
+}
+
+.campaign-content {
+	.entry-content {
+		padding-top: 40px;
+		background-color: $white;
+		p {
+			color: $black;
+			@include font(400,2rem,3.3rem,$hel-lt);
+			@include breakpoint($md-desk,true){
+				@include font(400,1.6rem,3rem,$hel-lt);
+			}
+			b, strong {
+				@include font(400,2rem,3.3rem,$hel-bd);
+				@include breakpoint($md-desk,true){
+					@include font(400,1.6rem,3rem,$hel-bd);
+				}
+			}
+			i {
+				@include font(400,2rem,3.3rem,$hel-it);
+				@include breakpoint($md-desk,true){
+					@include font(400,1.6rem,3rem,$hel-it);
+				}
+			}
+		}
+		h2, h3, h4, h5, h6 {color: $black}
+		h2 {
+			@include font(400,3.6rem,4rem,$hel-hv);
+		}
+		h3 {
+			@include font(400,2.8rem,3.4rem,$hel-bd);
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.cta-wrap {
+	padding-top: 15px;
+	float:left;
+	.cta-base {
+		position: relative;
+		width: 100%;
+		background-color: $sky-blue;
+		padding: 15px;
+		margin-bottom: 15px;
+		h3 {
+			color: $blue;
+			@include font(400,2.7rem,3.5rem,$aleo-bd);
+			@include breakpoint($sm-tab,true) {
+				@include font(400,1.5rem,2.5rem,$aleo-bd);
+			}
+			@include breakpoint($md-desk,true) {
+				@include font(400,1.9rem,2.9rem,$aleo-bd);
+			}
+			span {
+				@include font(400,4rem,4.5rem,$aleo-bd);
+				display: block;
+				@include breakpoint($sm-tab,true) {
+					@include font(400,2.8rem,3.5rem,$aleo-bd);
+				}
+				@include breakpoint($md-desk,true) {
+					@include font(400,3.5rem,4rem,$aleo-bd);
+				}
+			}
+		}
+		ul {
+			margin: 50px 0 0;
+			li {
+				list-style-type: none;
+				color: $blue;
+				margin: 0 0 10px;
+				&:before{
+					content:"\f178";
+					font-family:FontAwesome;
+					color:$orange2;
+					padding-right: 5px;
+				}
+				@include font(400,1.8rem,2.5rem,$hel);
+				@include breakpoint($sm-tab,true) {
+					@include font(400,1.2rem,1.9rem,$hel);
+				}
+				@include breakpoint($md-desk,true) {
+					@include font(400,1.5rem,2.2rem,$hel);
+				}
+			}
+		}
+		p {color: $blue;}
+	}
+	#long-cta {
+		min-height: 524px;
+		h3 {
+			margin-top: 20px;
+		}
+	}
+	#short-cta {
+		min-height: 220px;
+		h3, p {
+			text-align: center;
+		}
+		h3 {
+			margin-top: 50px;
+			@include breakpoint($sm-tab,true) {
+				margin-top: 10px;
+				@include font(400,1.9rem,2.9rem,$aleo-bd);
+			}
+			@include breakpoint($md-desk,true) {
+				margin-top: 40px;
+			}
+		}
+		p {
+			@include font(400,1.8rem,2.5rem,$hel);
+			@include breakpoint($sm-tab,true) {
+				@include font(400,1.4rem,2rem,$hel);
+			}
+			@include breakpoint($md-desk,true) {
+				@include font(400,1.6rem,3rem,$hel);
+			}
+		}
+	}
+	.button-base {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: $orange;
+		width: auto;
+		display:block;
+		float:right;
+		width:auto;
+		color:$white;
+		background:$orange2;
+		text-align:center;
+		text-transform:uppercase;
+		text-decoration:none;
+		a {
+			@include font(400,1.7rem,2rem,$aleo-bd);
+			display: block;
+			color: $white;
+			padding:15px 20px;
+			margin: 0;
+		}
+	}
+}
